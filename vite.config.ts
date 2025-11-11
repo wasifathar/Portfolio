@@ -30,7 +30,6 @@ export default defineConfig({
         manualChunks: {
           // Split vendor chunks for better caching
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
           'ui-vendor': ['framer-motion', '@radix-ui/react-dialog'],
         },
       },
@@ -44,9 +43,6 @@ export default defineConfig({
       'react',
       'react-dom',
       'react-router-dom',
-      'three',
-      '@react-three/fiber',
-      '@react-three/drei',
     ],
     exclude: ['postprocessing'], // Exclude heavy postprocessing from pre-bundling
   },
