@@ -1,0 +1,760 @@
+/* Global styles and CSS variables */
+
+/* Buttons */
+.btn-primary {
+  --g1: #0ea5e9; 
+  --g2: #10b981;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 12px 20px; 
+  border-radius: 12px; 
+  font-weight: 700;
+  color: #0b1324; 
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+  box-shadow: 0 10px 20px rgba(16, 185, 129, .25);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover { 
+  transform: translateY(-2px) scale(1.03); 
+  filter: saturate(1.1); 
+  box-shadow: 0 16px 26px rgba(16, 185, 129, .35); 
+}
+
+.btn-secondary {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 12px 20px; 
+  border-radius: 12px; 
+  font-weight: 700; 
+  color: #e5f2ff;
+  border: 1px solid rgba(59, 130, 246, .45);
+  background: linear-gradient(180deg, rgba(2, 6, 23, .6), rgba(2, 6, 23, .2));
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 12px 24px rgba(37, 99, 235, .25); 
+  background: rgba(2, 6, 23, .6); 
+}
+
+/* Chev scroll cue */
+.chev { 
+  width: 22px; 
+  height: 22px; 
+  border-bottom: 2px solid rgba(255, 255, 255, .6); 
+  border-right: 2px solid rgba(255, 255, 255, .6); 
+  transform: rotate(45deg); 
+  animation: chev 1.4s infinite; 
+  opacity: .8 
+}
+
+@keyframes chev { 
+  0% { transform: translateY(0) rotate(45deg) } 
+  50% { transform: translateY(6px) rotate(45deg) } 
+  100% { transform: translateY(0) rotate(45deg) } 
+}
+
+/* Reveal animations */
+.reveal { 
+  opacity: 0; 
+  transform: translateY(12px); 
+  transition: opacity .24s ease, transform .24s ease; 
+}
+
+.reveal.in { 
+  opacity: 1; 
+  transform: none; 
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cinematic Bloomberg Terminal Portfolio - 120fps Optimized */
+
+@layer base {
+  :root {
+    /* Premium Financial Platform Theme - Bloomberg + SAP Fiori + Goldman Sachs */
+    --background: 203 43% 8%; /* Deep Navy #0b1d2a */
+    --foreground: 200 6% 98%; /* Off-white #f9fafb */
+
+    /* Premium Cards & Surfaces */
+    --card: 203 43% 10%;
+    --card-foreground: 200 6% 98%;
+    --glass: 203 43% 12% / 0.85;
+    --glass-border: 158 60% 36% / 0.3; /* Emerald border */
+
+    /* Financial Platform Accents */
+    --primary: 158 60% 36%; /* Emerald Green #00b894 - Growth/Positive */
+    --primary-foreground: 203 43% 8%;
+    --primary-glow: 158 60% 50% / 0.6;
+
+    --secondary: 217 91% 60%; /* Royal Blue #2563eb - Trust/Stability */  
+    --secondary-foreground: 203 43% 8%;
+    --secondary-glow: 217 91% 60% / 0.6;
+
+    --accent: 48 100% 60%; /* Gold #f1c40f - Premium Feel */
+    --accent-foreground: 203 43% 8%;
+    --accent-glow: 48 100% 60% / 0.6;
+
+    /* Supporting Colors */
+    --muted: 203 43% 15%;
+    --muted-foreground: 210 4% 64%; /* Muted Gray #9ca3af */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 200 6% 98%;
+
+    --border: 203 43% 18%;
+    --input: 203 43% 15%;
+    --ring: 158 60% 36%;
+
+    --radius: 1rem;
+
+    /* Premium Financial Platform Variables - GPU Optimized */
+    --hero-gradient: linear-gradient(135deg, hsl(203 43% 8%), hsl(203 43% 12%));
+    --gradient-primary: linear-gradient(135deg, hsl(158 60% 36%), hsl(158 60% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(260 100% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(48 100% 60%), hsl(35 100% 60%));
+    --glow-primary: 0 0 30px hsl(var(--primary-glow)), 0 0 60px hsl(var(--primary-glow)); 
+    --glow-secondary: 0 0 30px hsl(var(--secondary-glow)), 0 0 60px hsl(var(--secondary-glow));
+    --glow-accent: 0 0 30px hsl(var(--accent-glow)), 0 0 60px hsl(var(--accent-glow));
+    --glass-backdrop: blur(20px) saturate(180%);
+    --transition-premium: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.2s ease-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+    cursor: none !important;
+  }
+
+  /* Hide default cursor when custom cursor is active */
+  html {
+    cursor: none !important;
+  }
+  
+  * {
+    cursor: none !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* PREMIUM FINANCIAL PLATFORM ANIMATIONS - 60fps */
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: hsl(var(--primary)); }
+  51%, 100% { border-color: transparent; }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gentle-scale {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes premium-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.3), 0 4px 20px hsl(var(--primary) / 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.5), 0 8px 30px hsl(var(--primary) / 0.2);
+  }
+}
+
+@keyframes card-hover-lift {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 10px hsl(var(--card) / 0.1);
+  }
+  100% {  
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 30px hsl(var(--primary) / 0.15), 0 0 20px hsl(var(--primary) / 0.1);
+  }
+}
+
+@keyframes underline-expand {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-fast {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes typing-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-lift {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 10px hsl(var(--card) / 0.1);
+  }
+  100% {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+      0 10px 30px hsl(var(--primary) / 0.15),
+      0 0 25px hsl(var(--primary) / 0.1);
+  }
+}
+
+@keyframes modal-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-photo-zoom {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slogan-cycle {
+  0%, 30% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+  65% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  70%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* LIGHTWEIGHT GPU-ACCELERATED UTILITIES - 60fps */
+@layer utilities {
+  .glass-morphic {
+    background: hsl(var(--glass));
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: 0 4px 20px hsl(var(--background) / 0.1);
+    will-change: transform, opacity;
+  }
+
+  .premium-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 14px;
+    box-shadow: 0 2px 10px hsl(var(--background) / 0.1);
+    transition: var(--transition-premium);
+    will-change: transform, box-shadow;
+  }
+
+  .transition-smooth {
+    transition: var(--transition-premium);
+    will-change: transform, opacity;
+  }
+
+  .transition-glow {
+    transition: var(--transition-glow);
+    will-change: box-shadow, border-color;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.3), 0 4px 20px hsl(var(--primary) / 0.1);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 15px hsl(var(--secondary) / 0.3), 0 4px 20px hsl(var(--secondary) / 0.1);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 15px hsl(var(--accent) / 0.3), 0 4px 20px hsl(var(--accent) / 0.1);
+  }
+
+  /* SMOOTH ANIMATIONS */
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.4s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.4s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-gentle-scale {
+    animation: gentle-scale 0.3s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-premium-glow {
+    animation: premium-glow 2s ease-in-out infinite;
+    will-change: box-shadow;
+  }
+
+  .animate-typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typewriter 2s steps(30) forwards, blink 1s infinite;
+  }
+
+  .animate-modal-scale {
+    animation: modal-scale-in 0.3s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-hero-photo {
+    animation: hero-photo-zoom 0.8s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-slogan-cycle {
+    animation: slogan-cycle 4s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .animate-marquee {
+    animation: marquee-scroll 20s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-marquee-scroll {
+    animation: marquee-scroll 40s linear infinite;
+    /* Removed will-change for better performance */
+  }
+
+  .animate-marquee-fast {
+    animation: marquee-fast 25s linear infinite;
+    /* Removed will-change for better performance */
+  }
+
+  /* HOVER EFFECTS */
+  .hover-lift {
+    transition: all 0.3s ease-out;
+    will-change: transform, box-shadow;
+  }
+  
+  .hover-lift:hover {
+    animation: card-hover-lift 0.3s ease-out forwards;
+  }
+
+  .hover-premium {
+    transition: var(--transition-premium);
+    will-change: transform, box-shadow, border-color, background-color;
+  }
+  
+  .hover-premium:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: hsl(var(--primary) / 0.5);
+    background-color: hsl(var(--accent) / 0.05);
+    box-shadow: 0 10px 30px hsl(var(--primary) / 0.15), 0 0 25px hsl(var(--primary) / 0.1);
+  }
+
+  .hover-glow {
+    transition: var(--transition-glow);
+    will-change: box-shadow, border-color;
+  }
+  
+  .hover-glow:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.3);
+  }
+
+  .hover-scale {
+    transition: var(--transition-premium);
+    will-change: transform;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* Mobile tap highlights */
+  @media (hover: none) {
+    .hover-premium:active,
+    .hover-lift:active {
+      transform: scale(0.98);
+      background-color: hsl(var(--accent) / 0.1);
+    }
+  }
+
+  /* NAVIGATION UNDERLINE */
+  .nav-underline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+    transform-origin: left;
+  }
+
+  .nav-underline:hover::after {
+    animation: underline-expand 0.3s ease-out forwards;
+  }
+
+  /* SECTION FADE INS */
+  .section-fade {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-out;
+  }
+
+  .section-fade.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* TYPING EFFECT */
+  .typing-word {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: typing-fade 0.5s ease-out forwards;
+  }
+
+  /* STAGGER DELAYS */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* MOBILE OPTIMIZATIONS */
+  .touch-optimized {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  /* Section scroll margin for anchor links */
+  section {
+    scroll-margin-top: 88px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* SMOOTH SCROLLING */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  .section-snap {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  /* GPU ACCELERATION */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, opacity;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  .section-snap {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+/* Professional Experience & Projects - Responsive Grid Layout */
+.experience-grid, .projects-grid {
+  display: grid;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+/* Mobile: Single column */
+@media (max-width: 768px) {
+  .experience-grid, .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+  
+  .experience-card, .project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    padding: 16px;
+    min-height: auto;
+    overflow: hidden;
+  }
+  
+  .experience-card img, .project-card img, .card .thumb {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .card-header, .card-body {
+    width: 100%;
+  }
+  
+  .pill-row, .tags {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .experience-card h3, .project-card h3, .card p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* Tablet: Two columns */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .experience-grid, .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Desktop: Three columns */
+@media (min-width: 1200px) {
+  .experience-grid, .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Card Styling */
+.experience-card, .project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  min-height: auto;
+  height: fit-content;
+}
+
+/* Desktop hover effects only */
+@media (min-width: 1200px) {
+  .experience-card:hover, .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px -4px hsl(var(--primary) / 0.25);
+    background-color: hsl(var(--accent) / 0.05);
+    border-color: hsl(var(--accent) / 0.2);
+  }
+}
+
+/* Mobile tap highlight */
+@media (hover: none) {
+  .experience-card:active, .project-card:active {
+    transform: scale(0.98);
+    background-color: hsl(var(--accent) / 0.1);
+  }
+}
+
+/* Lightweight animations */
+.section-fade {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.section-fade.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-lift-light {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.hover-lift-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px hsl(var(--primary) / 0.25);
+}
+
+.hover-tint:hover {
+  background-color: hsl(var(--accent) / 0.05);
+  border-color: hsl(var(--accent) / 0.2);
+}
+
+@media (hover: none) {
+  .hover-tint:active {
+    background-color: hsl(var(--accent) / 0.1);
+    border-color: hsl(var(--accent) / 0.3);
+  }
+}
