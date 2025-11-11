@@ -1,80 +1,123 @@
-# Muhammad Wasif Athar - Finance Portfolio
+# Muhammad Wasif Athar - Portfolio Website
 
-## Project Overview
+A modern, high-performance portfolio website showcasing expertise in Quantitative Finance, Economics, and Data Analytics. Built with cutting-edge web technologies to deliver a smooth, interactive experience.
 
-A modern portfolio website showcasing expertise in Finance, Economics, and Quantitative Analysis.
+## 🌟 Features
 
-## Getting Started
+- **Multi-Page Architecture**: Optimized page-based navigation for better performance
+- **Interactive Animations**: Smooth transitions and hover effects using Framer Motion
+- **3D Visualizations**: WebGL-powered particle backgrounds and interactive components
+- **Responsive Design**: Fully responsive across all devices and screen sizes
+- **Performance Optimized**: Lazy loading, code splitting, and optimized animations
+- **Modern UI/UX**: Clean, professional design with Bloomberg Terminal-inspired aesthetics
+
+## 🚀 Tech Stack
+
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite (fast HMR and optimized builds)
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion for smooth transitions
+- **3D Graphics**: OGL (WebGL library) for particle effects
+- **UI Components**: shadcn/ui component library
+- **Routing**: React Router v6 with page transitions
+- **State Management**: React Hooks and Context API
+
+## 📦 Installation
 
 ### Prerequisites
 
-- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js 18+ and npm (recommended: use [nvm](https://github.com/nvm-sh/nvm))
 
-### Installation
+### Setup
 
-```sh
-# Step 1: Clone the repository
-git clone <YOUR_GIT_URL>
+```bash
+# Clone the repository
+git clone https://github.com/wasifathar/Portfolio.git
 
-# Step 2: Navigate to the project directory
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd Portfolio
 
-# Step 3: Install the necessary dependencies
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server
+# Start development server
 npm run dev
 ```
 
-## Technologies Used
+The site will be available at `http://localhost:8080`
 
-This project is built with:
+## 🏗️ Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- React Three Fiber (for 3D components)
-- Framer Motion (for animations)
+```
+src/
+├── components/     # Reusable React components
+├── pages/          # Page components (Hero, About, Education, etc.)
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functions and configurations
+└── assets/         # Static assets and images
+```
 
-## Google Analytics 4 Setup
+## 📄 Pages
 
-This project includes Google Analytics 4 (GA4) tracking with the measurement ID: `G-YB4Y2HZBXP`.
+- **Hero**: Introduction with profile and resume viewer
+- **About**: Executive profile with core competencies
+- **Education**: Academic qualifications with university logos
+- **Experience**: Professional experience timeline
+- **Projects**: Featured projects showcase
+- **Certificates**: Professional certifications gallery
+- **Research**: Published research papers and publications
+- **Contact**: Contact form and social links
 
-### Implementation Details:
-- **Global Setup**: GA4 script is loaded in `index.html` with consent defaults and debug mode enabled
-- **SPA Tracking**: Automatic page view tracking for client-side route changes using React Router
-- **Development Helper**: `window.gaTest()` function available in development for testing events
+## 🎨 Key Components
 
-### Code Locations:
-- **Main GA4 Script**: `index.html` (lines 31-50)
-- **Analytics Utilities**: `src/lib/analytics.ts`
-- **Tracking Hook**: `src/hooks/useGaTracking.ts`
-- **App Integration**: `src/App.tsx` (useGaTracking hook)
+- **Particles**: WebGL particle background system
+- **ElectricBorder**: Animated SVG border effects
+- **TiltedCard**: 3D tilt effect cards for education section
+- **DecayCard**: Image cards with displacement effects
+- **StockTicker**: Live market data ticker
+- **Navigation**: Dock-style navigation bar
 
-### Testing Analytics:
-1. **Real-time Reports**: Check Google Analytics → Reports → Realtime
-2. **Debug View**: Enable in GA4 Admin → DebugView (debug_mode is enabled)
-3. **Development Testing**: Open browser console and run `window.gaTest()` to send test events
-4. **Network Tab**: Verify requests to `https://www.google-analytics.com/g/collect`
+## 🚀 Deployment
 
-### Content Security Policy:
-If implementing CSP, ensure these domains are allowed:
-- `script-src: https://www.googletagmanager.com`
-- `connect-src: https://www.google-analytics.com https://region1.google-analytics.com`
+Build for production:
 
-## Deployment
-
-This project can be deployed to any static hosting service such as:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
-
-Build the project with:
-```sh
+```bash
 npm run build
 ```
 
-The output will be in the `dist/` directory.
+The optimized build will be in the `dist/` directory, ready for deployment to:
+
+- **Vercel**: `vercel deploy`
+- **Netlify**: Connect GitHub repository
+- **GitHub Pages**: Use GitHub Actions
+- **AWS S3 + CloudFront**: Upload `dist/` folder
+
+## 📊 Performance Optimizations
+
+- Code splitting and lazy loading
+- Optimized WebGL animations
+- IntersectionObserver for viewport-based rendering
+- Memoized components to prevent unnecessary re-renders
+- CSS-based animations where possible
+- Reduced particle counts for better performance
+
+## 🔧 Configuration
+
+- **Port**: Configured in `vite.config.ts` (default: 8080)
+- **Analytics**: Google Analytics 4 integration (ID: G-YB4Y2HZBXP)
+- **Environment**: Development and production builds optimized
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 👤 Author
+
+**Muhammad Wasif Athar**
+- MSc Economics & Finance (University of Milan)
+- CFA Level I Candidate
+- Quantitative Finance & Data Analytics Specialist
+
+---
+
+Built with ❤️ using React, TypeScript, and modern web technologies.
