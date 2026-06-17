@@ -117,7 +117,3 @@ This project is private and proprietary.
 - MSc Economics & Finance (University of Milan)
 - CFA Level I Candidate
 - Quantitative Finance & Data Analytics Specialist
-
----
-
-Built with ❤️ using React, TypeScript, and modern web technologies.
