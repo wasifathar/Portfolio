@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" role="img" aria-labelledby="title desc">
+  <title id="title">SPINAKER AI in Business and Finance summer school card</title>
+  <desc id="desc">Abstract University of Warsaw SPINAKER AI in Business and Finance programme artwork.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.48" stop-color="#12324a"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="700" height="900" rx="42" fill="url(#bg)"/>
+  <circle cx="90" cy="120" r="150" fill="#34d399" opacity="0.12"/>
+  <circle cx="610" cy="790" r="190" fill="#7dd3fc" opacity="0.12"/>
+  <g stroke="#9ca3af" stroke-opacity="0.22" stroke-width="2">
+    <path d="M70 260h560M70 330h560M70 400h560M70 470h560M70 540h560M70 610h560"/>
+    <path d="M140 210v470M230 210v470M320 210v470M410 210v470M500 210v470"/>
+  </g>
+  <g fill="none" stroke="url(#accent)" stroke-width="6" filter="url(#glow)">
+    <path d="M120 590c80-180 130-180 210-30s140 110 250-100"/>
+    <path d="M150 485l80-75 95 45 90-115 120 80" opacity="0.75"/>
+  </g>
+  <g fill="#e5e7eb">
+    <text x="350" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="4">SPINAKER</text>
+    <text x="350" y="186" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#a7f3d0">AI • BUSINESS • FINANCE</text>
+  </g>
+  <g transform="translate(160 255)">
+    <rect x="0" y="0" width="380" height="240" rx="28" fill="#020617" opacity="0.72" stroke="#34d399" stroke-opacity="0.45"/>
+    <circle cx="190" cy="104" r="58" fill="none" stroke="url(#accent)" stroke-width="8"/>
+    <path d="M190 40v128M126 104h128" stroke="#67e8f9" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+    <text x="190" y="205" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">UNIVERSITY OF WARSAW</text>
+  </g>
+  <text x="350" y="710" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">15–28 JUNE 2026</text>
+  <text x="350" y="760" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#a7f3d0">with University of Sussex Business School</text>
+  <text x="350" y="812" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#d1d5db">Selected cohort • 25 of 250 applicants</text>
+</svg>

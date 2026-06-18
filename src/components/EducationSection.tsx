@@ -40,6 +40,18 @@ export default function EducationSection() {
       grade: '',
       description: 'Since Jan 2025. Focus: Ethical standards, financial reporting, investment tools, equity & fixed income.',
       thesis: ''
+    },
+    {
+      id: 'spinaker-ai-finance',
+      degree: 'SPINAKER: Artificial Intelligence in Business and Finance',
+      institution: 'University of Warsaw x University of Sussex Business School',
+      logo: '/uploads/uw-spinaker-ai.svg',
+      location: 'Warsaw, Poland',
+      period: '15 June 2026 - 28 June 2026',
+      status: 'ongoing',
+      grade: 'Selected: 25 / 250 applicants',
+      description: 'Intensive two-week summer school implemented under the SPINAKER programme by the Faculty of Economic Sciences, University of Warsaw, in cooperation with the Business School at the University of Sussex. Focus areas include machine learning and AI fundamentals, AI applications in financial and geospatial data analysis, explainable AI, business process automation, AI ethics and law, and programming/data science tools.',
+      thesis: ''
     }
   ];
 
