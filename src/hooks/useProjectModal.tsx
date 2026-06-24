@@ -11,6 +11,8 @@ interface Project {
   tools?: string[];
   impact?: string;
   images?: string[];
+  liveUrl?: string;
+  sourceUrl?: string;
 }
 
 export function useProjectModal() {
@@ -102,6 +104,40 @@ export function useProjectModal() {
                     </h4>
                     <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-400/10 to-teal-400/10 border border-emerald-400/20">
                       <p className="text-slate-200 text-sm leading-relaxed font-medium">{project.impact}</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Project Links */}
+                {(project.liveUrl || project.sourceUrl) && (
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                      <span className="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>
+                      Project Links
+                    </h4>
+                    <div className="flex flex-wrap gap-3">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg bg-emerald-400/20 px-4 py-2 text-sm font-semibold text-emerald-200 border border-emerald-400/30 transition-all duration-300 hover:bg-emerald-400/30 hover:text-white"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          Open Live App
+                        </a>
+                      )}
+                      {project.sourceUrl && (
+                        <a
+                          href={project.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg bg-slate-700/40 px-4 py-2 text-sm font-semibold text-slate-200 border border-slate-500/30 transition-all duration-300 hover:border-emerald-400/30 hover:text-emerald-200"
+                        >
+                          <Github className="h-4 w-4" />
+                          View Source
+                        </a>
+                      )}
                     </div>
                   </div>
                 )}
