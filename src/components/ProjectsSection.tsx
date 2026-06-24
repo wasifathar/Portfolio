@@ -17,6 +17,8 @@ interface Project {
   tools: string[];
   impact: string;
   images?: string[];
+  liveUrl?: string;
+  sourceUrl?: string;
 }
 
 export default function ProjectsSection() {
@@ -34,6 +36,22 @@ export default function ProjectsSection() {
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const projects: Project[] = [
+    {
+      id: 'odinvest',
+      title: 'ODINVEST Quantitative Workspace',
+      subtitle: 'Quant finance web app on odinvest.wasifathar.com',
+      thumb: '',
+      tags: ['React', 'Quant Finance', 'Options Pricing', 'Portfolio Optimization'],
+      summary: 'Built and deployed ODINVEST, a quantitative finance workspace for investment analysis, market research dashboards, option pricing, stochastic simulations, yield curve views, and portfolio optimization.',
+      details: [
+        'Published the app under the odinvest.wasifathar.com portfolio subdomain for direct access from the main portfolio',
+        'Implemented finance-focused modules for Black-Scholes option pricing, Geometric Brownian Motion simulations, yield curve analysis, and Markowitz portfolio optimization',
+        'Designed the product as an empirical sandbox for comparing investment opportunities through quantitative signals and research dashboards'
+      ],
+      tools: ['React', 'TypeScript', 'Quantitative Finance', 'Financial Modeling'],
+      impact: 'Turns the portfolio into a live finance product showcase with hands-on quantitative analysis workflows',
+      liveUrl: 'https://odinvest.wasifathar.com'
+    },
     {
       id: '1',
       title: 'Financial Forecasting for L\'Oréal',
