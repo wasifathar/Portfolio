@@ -10,6 +10,28 @@ const ResearchSection = () => {
   const [openCard, setOpenCard] = useState<string | null>(null);
   const publications = [
     {
+      id: 'kosovo-diaspora-safety-net',
+      title: 'Kosovo’s Diaspora Safety Net: Are Remittances Replacing Domestic Productive Capacity?',
+      year: '2026',
+      venue: 'SSRN',
+      type: 'Working Paper / SSRN Preprint',
+      url: '#ssrn-link',
+      abstract: 'This working paper examines whether remittances in Kosovo function as an informal welfare system or reflect limits in domestic productive capacity. Using annual DataSphere datasets from 2004–2024, the analysis compares remittance inflows with GDP, exports, inflation, and formal employment. The findings show that remittances grew from EUR 357.0 million in 2004 to EUR 1.355 billion in 2024, while exports grew faster but remained below remittances in 2024. Remittances as a share of GDP declined from 17.2% in 2008 to 13.1% in 2024, suggesting reduced but persistent macroeconomic dependence.',
+      methodology: [
+        'Uses annual DataSphere datasets covering Kosovo from 2004–2024',
+        'Compares remittance inflows with GDP, exports, inflation, and formal employment',
+        'Tracks remittance levels and remittances as a share of GDP across the sample period',
+        'Frames diaspora transfers against domestic productive-capacity indicators'
+      ],
+      findings: [
+        'Remittances grew from EUR 357.0 million in 2004 to EUR 1.355 billion in 2024',
+        'Exports grew faster over the period but remained below remittance inflows in 2024',
+        'Remittances as a share of GDP declined from 17.2% in 2008 to 13.1% in 2024',
+        'Kosovo shows reduced but persistent macroeconomic dependence on diaspora remittances'
+      ],
+      keywords: ['Kosovo', 'Remittances', 'Diaspora', 'Development Economics', 'Migration', 'DataSphere', 'GDP', 'Exports', 'JEL: F24', 'JEL: O15', 'JEL: O11', 'JEL: F22', 'JEL: E21']
+    },
+    {
       id: 'brain-drain',
       title: 'The Impact of Brain Drain: Assessing Economic Shifts in Pakistan',
       year: '2025',
