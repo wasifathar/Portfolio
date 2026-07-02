@@ -15,7 +15,7 @@ const ResearchSection = () => {
       year: '2026',
       venue: 'SSRN',
       type: 'Working Paper / SSRN Preprint',
-      url: '#ssrn-link',
+      url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7027138',
       abstract: 'This working paper examines whether remittances in Kosovo function as an informal welfare system or reflect limits in domestic productive capacity. Using annual DataSphere datasets from 2004–2024, the analysis compares remittance inflows with GDP, exports, inflation, and formal employment. The findings show that remittances grew from EUR 357.0 million in 2004 to EUR 1.355 billion in 2024, while exports grew faster but remained below remittances in 2024. Remittances as a share of GDP declined from 17.2% in 2008 to 13.1% in 2024, suggesting reduced but persistent macroeconomic dependence.',
       methodology: [
         'Uses annual DataSphere datasets covering Kosovo from 2004–2024',
