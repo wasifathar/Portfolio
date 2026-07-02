@@ -4,62 +4,62 @@ import { containerStagger, popCard } from "@/lib/motion";
 const skills = [
   {
     name: "Python",
-    logo: "/lovable-uploads/694cd1b4-b3eb-4500-af81-57db1b8a26f0.png",
+    logo: "/uploads/694cd1b4-b3eb-4500-af81-57db1b8a26f0.png",
     category: "Programming"
   },
   {
     name: "R",
-    logo: "/lovable-uploads/697a2888-fcc4-4616-a109-bb4d47f2cd2a.png",
+    logo: "/uploads/697a2888-fcc4-4616-a109-bb4d47f2cd2a.png",
     category: "Programming"
   },
   {
     name: "MATLAB",
-    logo: "/lovable-uploads/eefcf9be-0bff-4a8c-9693-ca1f345f86ca.png",
+    logo: "/uploads/eefcf9be-0bff-4a8c-9693-ca1f345f86ca.png",
     category: "Programming"
   },
   {
     name: "Oracle",
-    logo: "/lovable-uploads/044fa6f8-6284-4e68-bd03-5439a216bf8a.png",
+    logo: "/uploads/044fa6f8-6284-4e68-bd03-5439a216bf8a.png",
     category: "Database"
   },
   {
     name: "Anaconda",
-    logo: "/lovable-uploads/66107a78-8ab5-4894-81f7-3c331b49f6fb.png",
+    logo: "/uploads/66107a78-8ab5-4894-81f7-3c331b49f6fb.png",
     category: "Data Science"
   },
   {
     name: "Looker",
-    logo: "/lovable-uploads/976c636c-0dcd-4247-a883-e4ea6e1b4ea4.png",
+    logo: "/uploads/976c636c-0dcd-4247-a883-e4ea6e1b4ea4.png",
     category: "Business Intelligence"
   },
   {
     name: "Cognos",
-    logo: "/lovable-uploads/65ab119e-1a7e-431d-b64e-82523115b460.png",
+    logo: "/uploads/65ab119e-1a7e-431d-b64e-82523115b460.png",
     category: "Business Intelligence"
   },
   {
     name: "Audit Analytics",
-    logo: "/lovable-uploads/beadcd87-0139-4a75-8323-f4b438be5bdd.png",
+    logo: "/uploads/beadcd87-0139-4a75-8323-f4b438be5bdd.png",
     category: "Audit & Compliance"
   },
   {
     name: "GAAP",
-    logo: "/lovable-uploads/2dff0782-0733-4dcb-a705-e004a4f8ab27.png",
+    logo: "/uploads/2dff0782-0733-4dcb-a705-e004a4f8ab27.png",
     category: "Accounting Standards"
   },
   {
     name: "Financial Analysis",
-    logo: "/lovable-uploads/956216c2-df10-46a0-8fd8-006d05cef1e1.png",
+    logo: "/uploads/956216c2-df10-46a0-8fd8-006d05cef1e1.png",
     category: "Financial Modeling"
   },
   {
     name: "Slack",
-    logo: "/lovable-uploads/5b060cba-555c-4ccf-8b75-36200dc8f928.png",
+    logo: "/uploads/5b060cba-555c-4ccf-8b75-36200dc8f928.png",
     category: "Communication"
   },
   {
     name: "SOX Compliance",
-    logo: "/lovable-uploads/71914503-ce59-4f22-be44-c434862c1648.png",
+    logo: "/uploads/71914503-ce59-4f22-be44-c434862c1648.png",
     category: "Regulatory Compliance"
   }
 ];
